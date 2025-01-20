@@ -49,7 +49,7 @@ export class UserData {
       'echo "sudo shutdown -P +1" > ${CURRENT_PATH}shutdown_script.sh',
       "chmod +x ${CURRENT_PATH}shutdown_script.sh",
       'echo "./config.sh remove --token ${runnerRegistrationToken.token} || true" > ${CURRENT_PATH}shutdown_now_script.sh',
-      'echo "shutdown -h now" > ${CURRENT_PATH}shutdown_now_script.sh',
+      'echo "sudo shutdown -h now" > ${CURRENT_PATH}shutdown_now_script.sh',
       "chmod +x ${CURRENT_PATH}shutdown_now_script.sh",
       "export ACTIONS_RUNNER_HOOK_JOB_COMPLETED=${CURRENT_PATH}shutdown_script.sh",
       'echo "ACTIONS_RUNNER_HOOK_JOB_COMPLETED=${CURRENT_PATH}shutdown_script.sh" > .env',
